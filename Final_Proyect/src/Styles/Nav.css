@@ -1,0 +1,11 @@
+.Title{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top:20%;
+}
+
+.img{
+    width: 5%;
+    transform: rotate(90deg);
+}
