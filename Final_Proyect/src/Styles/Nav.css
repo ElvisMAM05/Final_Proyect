@@ -7,5 +7,23 @@
 
 .img{
     width: 5%;
-    transform: rotate(90deg);
+    margin-left: 45%;
+    margin-top: 10%;
+    transform: rotate(20deg);
+    animation: moverArribaAbajo 2s ease-in-out infinite;
+} 
+
+
+@keyframes moverArribaAbajo {
+    0% {
+      transform: translateY(10px);
+     
+    }
+    50% {
+      transform: translateY(-10px); /* Ajusta este valor según la escala deseada */
+    }
+    100% {
+      transform: translateY(10px);
+    }
+
 }
