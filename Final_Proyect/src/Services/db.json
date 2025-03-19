@@ -1,0 +1,19 @@
+{
+  "Register": [
+    {
+      "id": "0c07",
+      "Nombre": "Elvis",
+      "Password": "12345",
+      "Gmail": "eaguilar@gmail.com",
+      "Edad": "2004-10-19"
+    },
+    {
+      "id": "b4b5",
+      "Nombre": "Elvis",
+      "Password": "12345",
+      "Gmail": "eaguilar@gmail.com",
+      "Edad": "2025-02-26",
+      "Gender": "masculino"
+    }
+  ]
+}

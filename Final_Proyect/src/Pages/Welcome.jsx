@@ -4,6 +4,9 @@ import Hero from "../Components/Hero";
 const Welcome = () => {
   return (
     <>
+    <header>
+    
+    </header>
       <main>
         <Hero />
 

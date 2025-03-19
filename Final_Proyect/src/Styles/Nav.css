@@ -25,5 +25,27 @@
     100% {
       transform: translateY(10px);
     }
+  }
 
+    @keyframes moverDerecha {
+      
+      0% {
+        transform: translateX(10px);
+       
+      }
+      50% {
+        transform: translateX(-10px); /* Ajusta este valor según la escala deseada */
+      }
+      100% {
+        transform: translateX(10px);
+      }
+   
+
+}
+.Dude{
+
+  animation: moverDerecha 2s ease-in-out infinite;
+  margin-left: 90%;
+  margin-top: 35%;
+  width: 80px;
 }

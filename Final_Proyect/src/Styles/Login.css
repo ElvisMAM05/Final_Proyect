@@ -1,0 +1,60 @@
+.Section_Login {
+  background-color: rgb(12, 52, 87);
+  width: 300px;
+  height: 400px;
+  margin-left: 35%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contenedor-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 50px;
+
+    button{
+        margin-top: 50px;
+    margin-left: 50px;
+    }
+}
+.Section_Register {
+  background-color: rgb(12, 52, 87);
+  width: 300px;
+  height: 400px;
+  margin-left: 35%;
+  border-radius: 20px;
+  margin-top: 10%;
+}
+.Change {
+  display: inline;
+  list-style: none;
+  gap: 9px;
+}
+.a {
+  background: red;
+  color: black;
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+  border: rgba(33, 29, 29, 0.231);
+  margin: 1%;
+}
+.b {
+  width: 210px;
+  height: 25px;
+  border-radius: 5px;
+  border: rgba(33, 29, 29, 0.231);
+}
+.cont-divs-main{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-left: 50px;
+    gap: 20px;
+}
+.enlaceMain{
+    margin-left: 60px;
+
+}
