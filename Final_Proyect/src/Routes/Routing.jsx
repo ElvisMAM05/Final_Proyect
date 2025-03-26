@@ -4,6 +4,8 @@ import Welcome from '../Pages/Welcome'
 import RegisterP from '../Pages/RegisterP'
 import MainP from '../Pages/MainP'
 import MainForm from '../Components/MainForm'
+import Admi from '../Pages/Admi'
+
 
 function Routing() {
   return (
@@ -13,6 +15,8 @@ function Routing() {
             <Route path='/Register' element={<RegisterP/>}/>
             <Route path='/MainP' element={<MainP/>}/>
             <Route path='/login' element={<MainForm/>}/>
+            <Route path='Admins' element={<Admi/>}/>
+            
         </Routes>
     </Router>
   )

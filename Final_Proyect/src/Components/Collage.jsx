@@ -3,9 +3,6 @@ import "../Styles/Collage.css"
 const Collage = () => { 
     return(
 
-  
-
-
         <div id="collage1">
         <div>
             <h2>Sobre nosotros </h2>

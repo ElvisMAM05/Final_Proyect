@@ -1,35 +1,45 @@
-import React from 'react';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importa Bootstrap JS si usas npm
+import React, { useEffect, useState } from 'react';
+import Header from '../Components/Header';
+import { getData } from '../Services/Calls';
+import CardT from '../Components/CardT';
+import "../Styles/Card.css";
+
+
 
 function Main() {
-  return (
-<>
-    <div>
-<h1></h1>
-    </div>
+  const [eventos,setEventos] =useState([])
 
-    
-    <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img src="../src/Images/Diferentes_Puntos.jpg" className="d-block w-100" alt="Slide 1" />
-        </div>
-        <div className="carousel-item">
-          <img src="../src/Images/Recollection.jpg" className="d-block w-100" alt="Slide 2" />
-        </div>
-        <div className="carousel-item">
-          <img src="../src/Images/Basura.jpg" className="d-block w-100" alt="Slide 3" />
-        </div>
-      </div>
-      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
-    </div>
+  useEffect(()=>{
+    async function traeEventos() {
+      const datos = await getData("events")
+      setEventos(datos)
+    }
+    traeEventos()
+  },[])
+
+
+
+  return (
+    <>
+    <header>
+    <Header/>
+    </header>
+    <main className='CardsContainer'>
+      {eventos.map((evento)=>{
+        return(
+          <CardT
+        
+            img={evento.imgEvento}
+            titulo={evento.nombreEvento}
+            descripcion={evento.descripcionEvento}
+            Point={evento.puntosEvento}
+            Ubicación={evento.ubicacionEvento}
+           
+          />
+        )
+      })}
+    </main>
+
     </>
   );
 }

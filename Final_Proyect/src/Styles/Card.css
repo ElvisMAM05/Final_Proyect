@@ -1,0 +1,51 @@
+.Cardss {
+  background: linear-gradient(to bottom, #33333346, #00000085); /* Degradado suave negro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Sombra elegante */
+  padding: 20px;
+  margin: 20px;
+  color: #fff; /* Texto en blanco para contraste */
+  
+}
+.cont-cardss{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.Imgs{
+    width: 10rem;
+    border-radius: 5px;
+}
+
+.CardsContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px; 
+    justify-items: center; 
+}
+
+.list-group-flush {
+
+    border-radius: 5px; 
+    padding: 10px; 
+  }
+  
+  .list-group-flush .list-group-item {
+    background-color: transparent; 
+    color: #ffffff; 
+    border: solid 1px;
+    padding: 8px 15px; 
+    font-size: 14px; 
+  }
+  
+  .list-group-flush .list-group-item:hover {
+    background-color: #e63946; 
+    color: white; 
+  
+  }
+
+  .btn {
+    display: inline-block;
+    visibility: visible;
+    margin: 10px;
+  }
+  

@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Header{
+    background: linear-gradient(to top,#840303,black);
+    max-width: auto;
+    height: 50px;
+    position: relative;
+    color: aquamarine;
+
+}
+.ImagesT{
+    width: 200px;
+    height: 50px;
+    
+}

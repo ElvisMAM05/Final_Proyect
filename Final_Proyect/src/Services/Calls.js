@@ -26,7 +26,7 @@ const getData=async(endpoint) => {
     }
 }
 
-async function deleteUser(endpoint, id) {
+async function deleteData(endpoint, id) {
     try {
         const response = await fetch(`http://localhost:3000/users/${endpoint, id}`, {
             method: 'DELETE',
@@ -61,4 +61,4 @@ async function patchData(info,endpoint,id) {
           console.error(error);
       }
 }
-export {postData,getData,deleteUser,patchData}   
+export {postData,getData,deleteData,patchData}   

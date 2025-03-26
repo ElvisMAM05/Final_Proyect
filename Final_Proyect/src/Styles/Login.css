@@ -1,8 +1,10 @@
 .Section_Login {
-  background-color: rgb(12, 52, 87);
+position: absolute;
+  background: linear-gradient(to top,#121212db,#840303);
   width: 300px;
   height: 400px;
   margin-left: 35%;
+  margin-top: 7%;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -13,28 +15,37 @@
     flex-direction: column;
     gap: 50px;
     margin-left: 50px;
-
-    button{
-        margin-top: 50px;
-    margin-left: 50px;
-    }
+    
 }
+
+    button{ 
+      margin-top: 50px;
+      margin-left: 50px;
+      width: 90px;
+    }
+
 .Section_Register {
-  background-color: rgb(12, 52, 87);
+  background: linear-gradient(to top,#121212db,#840303);
   width: 300px;
-  height: 400px;
+  height: 500px;
   margin-left: 35%;
   border-radius: 20px;
-  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute ;
+  text-align: center;
+  margin-top: 1%;
 }
 .Change {
   display: inline;
   list-style: none;
   gap: 9px;
+
 }
 .a {
-  background: red;
-  color: black;
+  background: #D3D3D3;
+  color:#840303;
   width: 200px;
   height: 25px;
   border-radius: 5px;
@@ -42,6 +53,7 @@
   margin: 1%;
 }
 .b {
+  background: #D3D3D3;
   width: 210px;
   height: 25px;
   border-radius: 5px;
@@ -56,5 +68,49 @@
 }
 .enlaceMain{
     margin-left: 60px;
+
+}
+
+.Labels{
+  color: yellow;
+}
+
+.Links{
+  color: yellow;
+  list-style: none;
+  display: inline;
+  gap: 10px;
+  text-decoration: none;
+}
+.enlaceMain{
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 110%;
+  color: yellow;
+  text-decoration: none;
+  
+}
+.ac{
+
+  margin: 10px;
+  gap: 5px;
+}
+
+.Inputbases{
+
+  display: flex;
+  margin: 1px;;
+}
+
+.Selects{
+ 
+}
+.btn{
+  position: absolute;
+  margin-left: -35%;
+}
+.Options{
+  position: absolute;
+  margin-left: -15%;
 
 }
