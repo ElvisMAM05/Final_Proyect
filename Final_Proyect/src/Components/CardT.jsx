@@ -2,14 +2,13 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import "../Styles/Card.css";
 import { deleteData  } from "../Services/Calls";
-function CardT({Ubicación,titulo,img,descripcion,Point,Delete,id}) {
+function CardT({Ubicación,titulo,img,descripcion,Point,id}) {
  
-  async function Eliminarr() {
-    await deleteData("events", id); 
-    if (Delete) {
-      Delete(id); 
-    }
-  }
+function Eliminar(id){
+  console.log(id)
+}
+
+
   
    
  
@@ -31,8 +30,8 @@ function CardT({Ubicación,titulo,img,descripcion,Point,Delete,id}) {
           <ListGroup.Item>Ubicación: {Ubicación}</ListGroup.Item>
           <ListGroup.Item>Puntos disponibles: {Point}</ListGroup.Item>
         </ListGroup>
-        <button className="btn-participar" onClick={Eliminarr}>Borrar</button>
-        <button className="btn-participar">Editar</button>
+        <button className="btn-participar" >Borrar</button>
+      <button className="btn-participar">Editar</button>
       </Card.Body>
     </Card>
   </div>

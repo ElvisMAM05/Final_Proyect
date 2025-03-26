@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { postData,getData,deleteData } from "../Services/Calls";
+import { postData,getData } from "../Services/Calls";
 import CardT from "../Components/CardT";
 import "../Styles/Card.css"
 function AdminC() {
@@ -41,19 +41,6 @@ function AdminC() {
     traeEventos()
   },[])
 
-  const Delete = async (id) => {
-    try {
-      // Elimina el evento en el backend
-      await deleteData("events", id);
-  
-      // Actualiza el estado local eliminando el evento correspondiente
-      const nuevosEventos = eventos.filter((evento) => evento.id !== id);
-      setEventos(nuevosEventos);
-    } catch (error) {
-      console.error("Error al eliminar el evento:", error);
-    }
-  };
-  
 
 
 
@@ -77,15 +64,18 @@ function AdminC() {
       {eventos.map((evento)=>{
         return(
           <CardT
+          key={evento.id}
             img={evento.imgEvento}
             titulo={evento.nombreEvento}
             descripcion={evento.descripcionEvento}
             Point={evento.puntosEvento}
             Ubicación={evento.ubicacionEvento}
-            Delete={Delete}
+            
           />
+          
         )
       })}
+     
       </div>
       </>
     )}
