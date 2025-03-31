@@ -3,6 +3,8 @@ import { Await, Link } from "react-router-dom";
 import "../Styles/Login.css";
 import { getData, postData } from "../Services/Calls";
 import { useNavigate } from "react-router-dom";
+import AdminC from "./AdminC";
+import Swal from 'sweetalert2';
 function MainForm() {
   const navigate = useNavigate();
   const [Nombre, setName] = useState("");
@@ -20,6 +22,8 @@ function MainForm() {
       Gmail: UserGmail,
       Edad: UserEdad,
       Gender: Gender,
+      Rol: "Usuario"
+      
     };
 
     await postData(Dates, "Register");
@@ -29,15 +33,28 @@ function MainForm() {
     const Datos = await getData("Register");
 
     const result = Datos.find(
-      (Dato) => Dato.Nombre === NombreL && Dato.Password === PasswordL
+      (Dato) => Dato.Nombre === NombreL && Dato.Password === PasswordL && Dato.Rol==="Usuario"
     );
+    const result2= Datos.find(
+      (Dato) => Dato.Nombre === NombreL && Dato.Password === PasswordL && Dato.Rol==="Admi"
+    )
 
     if (result) {
       console.log("Welcome" + NombreL);
       navigate("/MainP");
     } else {
-      console.log("Correo o contraseña incorrecta");
+            if(result2){
+              navigate("/Admins")
+              }else{
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops...",
+                  text: "Contraseña o Usuario incorrecto",
+                });
+              }
+
     }
+    
   }
 
   return (
@@ -179,10 +196,16 @@ function MainForm() {
             </div>
           </div>
           {/* FIN REGISTRO */}
+
+          
         </>
       )}
+    
+      
     </>
   );
+
+
 }
 
 export default MainForm;

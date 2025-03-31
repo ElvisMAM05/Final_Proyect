@@ -6,9 +6,10 @@
   margin: 2%;
   margin-left: 15%;
   border-radius: 20px;
-  background-color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.49'%3E%3Cpolygon fill='%23590000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%236b0000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%237f0000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23940000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23A00' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
-  
+  background-color: #2DB307;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23EAEAEA' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%232DB307' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%2300ae2e' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%2300a746' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%2300a05a' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%2300986d' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%2300907f' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%2300888e' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%2300809b' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%230077a6' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23006ead' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%230064b1' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23005bb1' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%230050ad' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%230045a6' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23003a9a' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23002d8c' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23001e7c' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%231F0B69' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -29,7 +30,7 @@
     margin-left: 52%;
     margin-top: 25%;
     border-radius: 90px;
-    border: 2px rgba(176, 6, 6, 0.774) solid;
+    border: 2px rgba(255, 255, 255, 0.541) solid;
     
 }
 .AboutUs{
@@ -38,8 +39,8 @@
     height: 400px;
     margin-top: 20%;
     margin-left: 1%;
-    background-color: rgba(81, 4, 4, 0.874);
-    border-radius: 5px;
+    background-color:#1a29816b;
+    border-radius: 20px;
    
 }
 

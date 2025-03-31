@@ -8,6 +8,7 @@ import "../Styles/Card.css";
 
 function Main() {
   const [eventos,setEventos] =useState([])
+  
 
   useEffect(()=>{
     async function traeEventos() {
@@ -28,12 +29,16 @@ function Main() {
       {eventos.map((evento)=>{
         return(
           <CardT
+          
         
             img={evento.imgEvento}
             titulo={evento.nombreEvento}
             descripcion={evento.descripcionEvento}
             Point={evento.puntosEvento}
             Ubicación={evento.ubicacionEvento}
+            showDeleteButton={false}
+            showParticipateButton={true}
+            showEditButton={false}
            
           />
         )

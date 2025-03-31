@@ -26,9 +26,9 @@ const getData=async(endpoint) => {
     }
 }
 
-async function deleteData(endpoint, id) {
+async function deleteData(endpoint,id) {
     try {
-        const response = await fetch(`http://localhost:3000/users/${endpoint, id}`, {
+        const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -61,4 +61,5 @@ async function patchData(info,endpoint,id) {
           console.error(error);
       }
 }
+
 export {postData,getData,deleteData,patchData}   
