@@ -1,0 +1,183 @@
+/* Estilos para el apartado de crear evento */
+.crear-evento {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .crear-evento input,
+  .crear-evento button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .crear-evento input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .crear-evento button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .crear-evento button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Estilos para el apartado de crear evento */
+.crear-evento {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #27971d98;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.crear-evento input{
+    width: 400px;
+    margin-left: 10%;
+}
+.crear-evento button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.crear-evento input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.crear-evento button {
+  background-color: #124984;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 200px;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+
+.crear-evento button:hover {
+  background-color: #2e5783;
+
+  
+}
+
+
+.crear-evento label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .crear-evento label span {
+    color: #007bff; /* Color para resaltar parte del texto */
+    font-size: 12px; /* Tamaño más pequeño para texto adicional */
+  }
+  
+  .crear-evento input {
+    margin-bottom: 10px;
+  }
+  
+
+  .Create{
+    background-color: #17cb386b;
+    border-radius: 20px;
+    font-size: 15px;
+    width: 200px;
+    height: 90px;
+    margin-top:2%;
+  }
+
+  .Most{
+    background-color: #cb17176b;
+    border-radius: 20px;
+    font-size: 15px;
+    width: 200px;
+    height: 90px;
+    margin-top:2%;
+  }
+
+  .Users{
+    background-color: #17bccb6b;
+    border-radius: 20px;
+    font-size: 15px;
+    width: 200px;
+    height: 90px;
+    margin-top:2%;
+  }
+
+
+  /* Contenedor general para los usuarios */
+.usuarios-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f900;
+   
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tarjeta individual para cada usuario */
+  .usuario-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .usuario-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Título (Nombre del usuario) */
+  .usuario-card h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Detalles del usuario */
+  .usuario-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+  
+  /* Ajuste para que las tarjetas sean responsivas */
+  @media (max-width: 768px) {
+    .usuarios-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .usuario-card {
+      width: 100%;
+      max-width: 300px;
+    }
+  }

@@ -9,9 +9,9 @@ function Header() {
       <nav className="nav-bar">
         <h1 className="logo">Reciclonick</h1>
         <ul className="nav-links">
-          <li><Link to="MainP">Servicios</Link></li>
+          <li><Link to={"MainP"}>Servicios</Link></li>
           <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-          <li><a href="#registro">Registro</a></li>
+          <li><Link to={"login"}>Registro/ Inicio</Link></li>
           <li><a href="#ubicaciones">Ubicaciones</a></li>
         </ul>
       </nav>

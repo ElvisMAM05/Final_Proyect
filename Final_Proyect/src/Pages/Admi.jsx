@@ -1,5 +1,6 @@
 import React from 'react'
 import AdminC from '../Components/AdminC'
+import Header from  '../Components/Header'
 
 function Admi() {
 
@@ -7,10 +8,16 @@ function Admi() {
 
 
   return (
-      
-  
-  <AdminC/>
-  
+
+<>
+    <header>
+      <Header/>
+    </header>  
+  <div>
+
+    <AdminC/>
+  </div>
+  </>
   )
 }
 

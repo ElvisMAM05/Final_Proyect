@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { postData, getData, deleteData, patchData } from "../Services/Calls";
 import CardT from "../Components/CardT";
 import Swal from "sweetalert2";
+import "../Styles/Admin.css"
 function AdminC() {
   const [mostrar, setMostrar] = useState(false);
+  const [DatosUser,setDatosUser]=useState(false)
   const [nombreEvento, setNombreEvento] = useState("");
   const [descripcionEvento, setDescripcionEvento] = useState("");
   const [ubicacionEvento, setUbicacionEvento] = useState("");
@@ -12,6 +14,7 @@ function AdminC() {
   const [MEX, setMEX] = useState(false);
   const [eventos, setEventos] = useState([]);
   const [Refrescar, setRefrescar] = useState("");
+  const [mostrarUsuarios, setMostrarUsuarios] = useState(false);
   async function enviarEvento() {
     const evento = {
       nombreEvento: nombreEvento,
@@ -41,10 +44,23 @@ function AdminC() {
     async function traeEventos() {
       const datos = await getData("events");
       setEventos(datos);
-    }
 
+    }
     traeEventos();
   }, [Refrescar]);
+
+
+  async function TraeUsuarios() {
+    const DatosUsuarios=await getData("Register")
+    setDatosUser(DatosUsuarios)
+    
+  }
+  function manejarMostrarUsuarios() {
+    if (!mostrarUsuarios) {
+      TraeUsuarios(); // Solo carga los datos si no están ya mostrados
+    }
+    setMostrarUsuarios(!mostrarUsuarios); // Alternamos la visibilidad
+  }
 
   async function Eliminar(id) {
     await deleteData("events", id);
@@ -113,9 +129,29 @@ function AdminC() {
   }
   return (
     <>
-      <button onClick={() => setMostrar(!mostrar)}>CREAR EVENTO</button>
+      <button className="Create" onClick={() => setMostrar(!mostrar)}>Crear Evento</button>
 
-      <button onClick={() => setMEX(!MEX)}>Mostrar Evento</button>
+      <button className="Users" onClick={manejarMostrarUsuarios }>Mostrar Usuarios</button>
+
+      <button className="Most" onClick={() => setMEX(!MEX)}>Mostrar Evento</button>
+
+
+      {mostrarUsuarios && (
+        <div className="usuarios-container">
+          {DatosUser.length ? (
+            DatosUser.map((usuario) => (
+              <div key={usuario.id} className="usuario-card">
+                <h3>{usuario.Nombre}</h3>
+                <p>Email: {usuario.Gmail}</p>
+                <p>Rol: {usuario.Rol}</p>
+              </div>
+            ))
+          ) : (
+            <p>No hay usuarios para mostrar.</p>
+          )}
+        </div>
+      )}
+
 
       {MEX && (
         <>
@@ -143,7 +179,7 @@ function AdminC() {
 
       {mostrar && (
         <>
-          <div>
+          <div className="crear-evento">
             <input
               type="text"
               placeholder="Nombre Evento"
