@@ -1,6 +1,6 @@
 .Section_Login {
 position: absolute;
-  background: linear-gradient(to top,#121212db,#840303);
+  background: rgba(16, 183, 16, 0.582);
   width: 300px;
   height: 400px;
   margin-left: 35%;
@@ -25,7 +25,7 @@ position: absolute;
     }
 
 .Section_Register {
-  background: linear-gradient(to top,#121212db,#840303);
+  background: rgba(16, 183, 16, 0.582);
   width: 300px;
   height: 500px;
   margin-left: 35%;
@@ -108,7 +108,7 @@ position: absolute;
 .btn{
   position: absolute;
   margin-left: -35%;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 .Options{
   position: absolute;
